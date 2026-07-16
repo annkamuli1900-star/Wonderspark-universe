@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>WonderSpark Universe</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f6fbff;
+      color: #24324a;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #4d8cff, #8b5cf6, #ff70b7);
+      color: white;
+      padding: 20px 8%;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 18px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      min-height: 75vh;
+      padding: 90px 8%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background:
+        linear-gradient(rgba(38, 85, 160, 0.45), rgba(106, 63, 176, 0.55)),
+        radial-gradient(circle at top, #8fdcff, #7457d9 65%, #493086);
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 7vw, 5.5rem);
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #ffd84d;
+      color: #25304a;
+      text-decoration: none;
+      padding: 14px 25px;
+      border-radius: 30px;
+      font-weight: bold;
+      margin: 6px;
+    }
+
+    .button.secondary {
+      background: white;
+      color: #5c3ec2;
+    }
+
+    section {
+      padding: 75px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+      color: #5337a5;
+    }
+
+    .section-intro {
+      max-width: 760px;
+      margin: 0 auto 40px;
+      text-align: center;
+      color: #5f6b7d;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 22px;
+      padding: 30px 22px;
+      box-shadow: 0 10px 30px rgba(49, 63, 102, 0.12);
+      text-align: center;
+      transition: transform 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-7px);
+    }
+
+    .card .icon {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      color: #4f38a0;
+      margin-bottom: 10px;
+    }
+
+    .about {
+      background: #fff1f8;
+    }
+
+    .about-box {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 35px;
+      border-radius: 22px;
+      box-shadow: 0 10px 30px rgba(49, 63, 102, 0.1);
+    }
+
+    .contact {
+      background: linear-gradient(135deg, #4d8cff, #8b5cf6);
+      color: white;
+      text-align: center;
+    }
+
+    .contact .section-title,
+    .contact .section-intro {
+      color: white;
+    }
+
+    footer {
+      background: #1f2940;
+      color: white;
+      text-align: center;
+      padding: 25px;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        justify-content: center;
+        text-align: center;
+      }
+
+      nav a {
+        margin: 6px;
+        display: inline-block;
+      }
+
+      .hero {
+        padding-top: 70px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">✨ WonderSpark Universe</div>
+
+      <div>
+        <a href="#home">Home</a>
+        <a href="#projects">Our World</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h1>WonderSpark Universe</h1>
+
+        <p>
+          A joyful world of learning, imagination, music, stories,
+          creativity and adventure for children and families.
+        </p>
+
+        <a class="button" href="#projects">Explore Our Universe</a>
+        <a class="button secondary" href="#about">Our Story</a>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2 class="section-title">Explore WonderSpark</h2>
+
+      <p class="section-intro">
+        WonderSpark Universe brings together our educational apps,
+        children's books, original music, animation, games and family-friendly creations.
+      </p>
+
+      <div class="cards">
+
+        <article class="card">
+          <div class="icon">📱</div>
+          <h3>WonderSpark Kids App</h3>
+          <p>
+            Fun and interactive learning activities for young children,
+            including letters, numbers, phonics, colours, shapes and life skills.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="icon">📚</div>
+          <h3>Books and Stories</h3>
+          <p>
+            Colourful children's books, bedtime stories and educational adventures
+            featuring the WonderSpark characters.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="icon">🎵</div>
+          <h3>Music</h3>
+          <p>
+            Original children's songs about learning, kindness, hygiene,
+            family, safety, movement and imagination.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="icon">🎬</div>
+          <h3>Animation</h3>
+          <p>
+            Bright and exciting animated stories featuring Joan, Jack,
+            Jesse and Lulu in WonderSpark Hill.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="icon">🎨</div>
+          <h3>Creative Learning</h3>
+          <p>
+            Art, music, nature, pretend play, puzzles and activities
+            designed to encourage children's curiosity.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="icon">👕</div>
+          <h3>Merchandise</h3>
+          <p>
+            WonderSpark clothing, stickers, character products
+            and more family-friendly creations coming soon.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <h2 class="section-title">About WonderSpark Universe</h2>
+
+      <div class="about-box">
+        <p>
+          WonderSpark Universe was created from a passion for children,
+          education, creativity and family learning.
+        </p>
+
+        <br />
+
+        <p>
+          Inspired by real experiences of helping children learn through
+          activities, questions, books and music, our goal is to create a safe,
+          colourful and exciting place where children can explore, imagine and grow.
+        </p>
+
+        <br />
+
+        <p>
+          WonderSpark Universe is the home of WonderSpark Kids,
+          WonderSpark Hill, children's books, educational songs,
+          animations and many more projects to come.
+        </p>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2 class="section-title">Contact Us</h2>
+
+      <p class="section-intro">
+        Follow the WonderSpark journey and discover new apps,
+        stories, songs and animated adventures.
+      </p>
+
+      <p>
+        Email:
+        <strong>your-email@example.com</strong>
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>
+      © 2026 WonderSpark Universe. All rights reserved.
+    </p>
+  </footer>
+
+</body>
+</html>
