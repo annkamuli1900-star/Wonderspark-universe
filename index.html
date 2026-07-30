@@ -320,19 +320,29 @@
       box-shadow: 0 12px 32px rgba(49, 63, 102, 0.1);
     }
 
-    .character-image {
-      width: 130px;
-      height: 130px;
-      margin: 0 auto 18px;
-      display: grid;
-      place-items: center;
-      border-radius: 50%;
-      font-size: 4rem;
-      background: linear-gradient(145deg, #dff1ff, #f7dcff);
-      border: 6px solid var(--white);
-      box-shadow: 0 8px 25px rgba(64, 60, 130, 0.15);
-    }
+     .character-image {
+  width: 240px;
+  height: 350px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 20px;
+}
+.character-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg,#4b92e7,#8d5ad4);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
 
+.character-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(75,146,231,.3);
+}
     .character h3 {
       color: #5036a0;
       margin-bottom: 7px;
@@ -644,38 +654,38 @@
       <div class="character-grid">
 
         <article class="character">
-          <div class="character-image">👧🏾</div>
+         <img src="images/Joan website.png" alt="Joan" class="character-image">
           <h3>Joan</h3>
           <p>
-            A thoughtful and confident older sister who enjoys helping
-            others learn.
+
+<a href="#" class="character-button">Meet Joan →</a>
           </p>
         </article>
 
         <article class="character">
-          <div class="character-image">👦🏾</div>
+         <img src="images/Jack website.png" alt="Jack" class="character-image">
           <h3>Jack</h3>
           <p>
-            An energetic young explorer who loves asking questions and
-            discovering new things.
+
+<a href="#" class="character-button">Meet Jack →</a>
           </p>
         </article>
 
         <article class="character">
-          <div class="character-image">👦🏽</div>
+      <img src="images/Jesse website.png" alt="Jesse" class="character-image">
           <h3>Jesse</h3>
           <p>
-            A cheerful younger brother who brings excitement, laughter
-            and curiosity to every adventure.
+
+<a href="#" class="character-button">Meet Jesse →</a>
           </p>
         </article>
-
+        
         <article class="character">
-          <div class="character-image">👧🏽</div>
+        <img src="images/Lulu website.png" alt="Lulu" class="character-image">
           <h3>Lulu</h3>
           <p>
-            A joyful friend who represents imagination, wonder,
-            kindness and childhood magic.
+
+<a href="#" class="character-button">Meet Lulu →</a>
           </p>
         </article>
 
