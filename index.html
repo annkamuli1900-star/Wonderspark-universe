@@ -24,6 +24,18 @@
       --text: #34405a;
       --light: #f7f8ff;
       --white: #ffffff;
+      .brand-slogan {
+    max-width: 700px;
+    margin: 22px auto;
+    color: #ffd84d;
+    font-size: 1.25rem;
+    font-weight: 800;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+}
     }
 
     * {
@@ -497,30 +509,37 @@
     }
 
     @media (max-width: 760px) {
-      header {
-        position: static;
-      }
 
-      nav {
+    header {
+        position: static;
+    }
+
+    nav {
         justify-content: center;
         text-align: center;
-      }
+    }
 
-      .nav-links {
+    .nav-links {
         justify-content: center;
         gap: 12px;
-      }
+    }
 
-      .hero {
+    .hero {
         min-height: auto;
         padding-top: 90px;
         padding-bottom: 90px;
-      }
-
-      section {
-        padding: 65px 6%;
-      }
     }
+
+    section {
+        padding: 65px 6%;
+    }
+
+    .brand-slogan {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+
+}
   </style>
 </head>
 
@@ -549,6 +568,9 @@
     <img src="images/wonderspark hill.png" alt="WonderSpark Hill">
 </div>
         <div class="eyebrow">🌈 Learning begins with wonder</div>
+        <p class="brand-slogan">
+    And Remember, Wherever You Are, WonderSpark lives In Your Heart!
+</p>
 
         <h1>Welcome to WonderSpark Universe</h1>
 
@@ -830,10 +852,18 @@
 
   </main>
 
-  <footer>
-    <p>© 2026 WonderSpark Universe. All rights reserved.</p>
-    <p>Created with love for children, families and curious minds.</p>
-  </footer>
+ <footer>
+    <p class="footer-slogan">
+        And Remember, Wherever You Are, WonderSpark lives In Your Heart!
+    </p>
 
+    <p>© 2026 WonderSpark Universe. All rights reserved.</p>
+</footer>
+.footer-slogan {
+    color: #ffd84d;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
 </body>
 </html>
