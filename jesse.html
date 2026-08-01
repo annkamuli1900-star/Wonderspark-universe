@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Meet Jesse | WonderSpark Universe</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f9ff;
+    color: #34384b;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+.topbar {
+    background: linear-gradient(135deg, #3285e6, #4f67d8, #8d5ad4);
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.brand {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    font-weight: bold;
+}
+
+.hero {
+    min-height: 650px;
+    padding: 70px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    flex-wrap: wrap;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(255,255,255,.24), transparent 25%),
+        radial-gradient(circle at 85% 30%, rgba(255,216,77,.18), transparent 22%),
+        linear-gradient(145deg, #3285e6, #4e68d8 55%, #8d5ad4);
+    color: white;
+}
+
+.hero-image {
+    flex: 1 1 360px;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 390px;
+    max-width: 100%;
+    max-height: 570px;
+    object-fit: contain;
+    filter: drop-shadow(0 24px 30px rgba(0,0,0,.22));
+}
+
+.hero-text {
+    flex: 1 1 430px;
+    max-width: 620px;
+}
+
+.small-title {
+    color: #ffd84d;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 7vw, 5.7rem);
+    line-height: 1.04;
+    margin: 10px 0 24px;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    max-width: 580px;
+}
+
+.button-row {
+    margin-top: 32px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.button {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 40px;
+    font-weight: bold;
+}
+
+.button-yellow {
+    background: #ffd84d;
+    color: #34384b;
+}
+
+.button-white {
+    background: white;
+    color: #3954b8;
+}
+
+.section {
+    padding: 85px 7%;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 45px;
+}
+
+.section-heading span {
+    color: #3b79df;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    color: #3954b8;
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    margin: 8px 0 16px;
+}
+
+.about-card {
+    max-width: 1050px;
+    margin: auto;
+    background: white;
+    border-radius: 32px;
+    padding: 45px;
+    box-shadow: 0 18px 45px rgba(49, 86, 160, .12);
+}
+
+.about-card h3 {
+    color: #3954b8;
+    font-size: 2rem;
+}
+
+.facts {
+    background: #eaf2ff;
+}
+
+.fact-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.fact-card {
+    background: white;
+    padding: 32px 22px;
+    border-radius: 26px;
+    text-align: center;
+    box-shadow: 0 14px 35px rgba(58, 86, 150, .10);
+}
+
+.fact-icon {
+    font-size: 2.5rem;
+}
+
+.fact-card h3 {
+    color: #3954b8;
+    margin-bottom: 6px;
+}
+
+.content-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.content-card {
+    background: white;
+    min-height: 270px;
+    padding: 35px 28px;
+    border-radius: 28px;
+    box-shadow: 0 16px 40px rgba(54, 82, 145, .11);
+}
+
+.content-card .icon {
+    font-size: 3rem;
+}
+
+.content-card h3 {
+    color: #3954b8;
+    font-size: 1.6rem;
+}
+
+.coming {
+    color: #3b79df;
+    font-weight: bold;
+}
+
+.meet-others {
+    background: linear-gradient(135deg, #3285e6, #8d5ad4);
+    color: white;
+    text-align: center;
+}
+
+.meet-others h2 {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+}
+
+.character-links {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.character-links a {
+    background: white;
+    color: #3954b8;
+    padding: 14px 27px;
+    border-radius: 35px;
+    font-weight: bold;
+}
+
+footer {
+    background: #263a82;
+    color: white;
+    text-align: center;
+    padding: 32px 20px;
+}
+
+@media (max-width: 850px) {
+    .fact-grid,
+    .content-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero {
+        text-align: center;
+    }
+
+    .button-row {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .topbar {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 50px 25px;
+        gap: 25px;
+    }
+
+    .hero-image img {
+        width: 285px;
+    }
+
+    .hero p {
+        font-size: 1.05rem;
+    }
+
+    .section {
+        padding: 65px 24px;
+    }
+
+    .fact-grid,
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-card {
+        padding: 30px 25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header class="topbar">
+    <div class="brand">✨ WonderSpark Universe</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#explore">Our World</a>
+        <a href="index.html#characters">Characters</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
+</header>
+
+<main>
+
+<section class="hero">
+
+    <div class="hero-image">
+        <img src="images/Jesse website.png" alt="Jesse from WonderSpark Hill">
+    </div>
+
+    <div class="hero-text">
+        <div class="small-title">Meet the characters</div>
+
+        <h1>Hello, I’m Jesse!</h1>
+
+        <p>
+            I am the cheerful younger brother at WonderSpark Hill.
+            I love playing, counting, discovering animals and turning
+            every small moment into a fun and exciting adventure.
+        </p>
+
+        <div class="button-row">
+            <a href="#about" class="button button-yellow">Discover My Story</a>
+            <a href="index.html#characters" class="button button-white">Meet Everyone</a>
+        </div>
+    </div>
+
+</section>
+
+<section class="section" id="about">
+
+    <div class="section-heading">
+        <span>My story</span>
+        <h2>Cheerful, Playful and Curious</h2>
+
+        <p>
+            Jesse fills WonderSpark Hill with laughter, energy,
+            imagination and a love of learning through play.
+        </p>
+    </div>
+
+    <div class="about-card">
+        <h3>A little about Jesse</h3>
+
+        <p>
+            Jesse is a happy and curious younger brother who enjoys
+            counting, playing games, discovering animals and asking lots
+            of questions. He approaches every new activity with excitement
+            and enjoys learning alongside his family and friends.
+        </p>
+
+        <p>
+            Jesse believes that learning should be fun. Even when something
+            feels difficult, he keeps trying and celebrates every little
+            achievement with a bright smile.
+        </p>
+    </div>
+
+</section>
+
+<section class="section facts">
+
+    <div class="section-heading">
+        <span>Fun facts</span>
+        <h2>Jesse’s Favourite Things</h2>
+    </div>
+
+    <div class="fact-grid">
+
+        <div class="fact-card">
+            <div class="fact-icon">🔢</div>
+            <h3>Favourite Activity</h3>
+            <p>Counting and playing games</p>
+        </div>
+
+        <div class="fact-card">
+            <div class="fact-icon">💙</div>
+            <h3>Favourite Colour</h3>
+            <p>Blue</p>
+        </div>
+
+        <div class="fact-card">
+            <div class="fact-icon">🐾</div>
+            <h3>Favourite Topic</h3>
+            <p>Animals and their sounds</p>
+        </div>
+
+        <div class="fact-card">
+            <div class="fact-icon">⭐</div>
+            <h3>Special Strength</h3>
+            <p>Joy, energy and curiosity</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section">
+
+    <div class="section-heading">
+        <span>Explore with Jesse</span>
+        <h2>Stories, Songs and Adventures</h2>
+
+        <p>
+            Jesse will appear in original WonderSpark stories, music,
+            educational videos, games and animated adventures.
+        </p>
+    </div>
+
+    <div class="content-grid">
+
+        <article class="content-card">
+            <div class="icon">📖</div>
+            <h3>Jesse’s Stories</h3>
+
+            <p>
+                Follow Jesse through playful stories about family,
+                friendship, animals, learning and life at WonderSpark Hill.
+            </p>
+
+            <div class="coming">Coming soon</div>
+        </article>
+
+        <article class="content-card">
+            <div class="icon">🎶</div>
+            <h3>Jesse’s Songs</h3>
+
+            <p>
+                Sing along with Jesse as he learns numbers, colours,
+                animals, kindness and many other fun lessons.
+            </p>
+
+            <div class="coming">Coming soon</div>
+        </article>
+
+        <article class="content-card">
+            <div class="icon">🎬</div>
+            <h3>Jesse’s Episodes</h3>
+
+            <p>
+                Watch Jesse and his friends explore the colourful world
+                of WonderSpark Hill through play and discovery.
+            </p>
+
+            <div class="coming">Coming soon</div>
+        </article>
+
+    </div>
+
+</section>
+
+<section class="section meet-others">
+
+    <h2>Meet Jesse’s Friends</h2>
+
+    <p>
+        Every WonderSpark character has their own personality,
+        favourite things and special adventures.
+    </p>
+
+    <div class="character-links">
+        <a href="joan.html">Meet Joan</a>
+        <a href="jack.html">Meet Jack</a>
+        <a href="lulu.html">Meet Lulu</a>
+        <a href="index.html">Back to Home</a>
+    </div>
+
+</section>
+
+</main>
+
+<footer>
+    © 2026 WonderSpark Universe. All rights reserved.
+</footer>
+
+</body>
+</html>
