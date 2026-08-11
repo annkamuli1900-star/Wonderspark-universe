@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <meta
+    name="description"
+    content="Discover the WonderSpark Kids App — joyful learning through letters, numbers, phonics, colours, shapes, animals, songs, games and life skills."
+  />
+
+  <title>WonderSpark Kids App | WonderSpark Universe</title>
+
+  <style>
+    :root {
+      --blue: #3d7ee8;
+      --purple: #7957d5;
+      --pink: #d75db2;
+      --yellow: #ffd84d;
+      --dark: #18233b;
+      --text: #34405a;
+      --light: #f7f8ff;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--light);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(
+        135deg,
+        var(--blue),
+        var(--purple),
+        var(--pink)
+      );
+      color: var(--white);
+      padding: 18px 7%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      max-width: 1250px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.35rem;
+      font-weight: 800;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background: linear-gradient(
+        145deg,
+        #2867c9 0%,
+        #7050cc 55%,
+        #bd5ebc 100%
+      );
+      color: var(--white);
+      text-align: center;
+      padding: 90px 7%;
+    }
+
+    .hero-content {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.4);
+      background: rgba(255,255,255,0.12);
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 7vw, 5rem);
+      line-height: 1.05;
+      margin: 0 0 24px;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto 30px;
+      font-size: 1.15rem;
+    }
+
+    .store-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .store-button {
+      display: inline-block;
+      text-decoration: none;
+      padding: 15px 22px;
+      border-radius: 14px;
+      font-weight: 800;
+      background: var(--white);
+      color: var(--dark);
+      box-shadow: 0 10px 28px rgba(24,35,59,0.2);
+    }
+
+    .store-button:hover {
+      transform: translateY(-2px);
+    }
+
+    section {
+      padding: 75px 7%;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin: 0 auto 42px;
+      text-align: center;
+    }
+
+    .section-heading span {
+      color: var(--pink);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      font-size: 0.9rem;
+    }
+
+    .section-heading h2 {
+      color: #5036a0;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      margin: 10px 0 14px;
+    }
+
+    .feature-grid {
+      max-width: 1150px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 22px;
+    }
+
+    .feature-card {
+      background: var(--white);
+      padding: 28px 24px;
+      border-radius: 22px;
+      box-shadow: 0 12px 35px rgba(49,63,102,0.12);
+      text-align: center;
+    }
+
+    .feature-card .icon {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    .feature-card h3 {
+      color: #5036a0;
+      margin-bottom: 10px;
+    }
+
+    .safe-section {
+      background: linear-gradient(135deg, #edf6ff, #f8eeff);
+    }
+
+    .safe-box {
+      max-width: 900px;
+      margin: auto;
+      background: var(--white);
+      padding: 34px;
+      border-radius: 24px;
+      box-shadow: 0 12px 35px rgba(49,63,102,0.12);
+      text-align: center;
+    }
+
+    .safe-box h2 {
+      color: #5036a0;
+      margin-top: 0;
+    }
+
+    .back-section {
+      text-align: center;
+      background: linear-gradient(
+        135deg,
+        var(--blue),
+        var(--purple),
+        var(--pink)
+      );
+      color: var(--white);
+    }
+
+    .back-section h2 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-top: 0;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 14px 24px;
+      border-radius: 14px;
+      background: var(--yellow);
+      color: #24324a;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    footer {
+      background: var(--dark);
+      color: var(--white);
+      text-align: center;
+      padding: 28px 7%;
+    }
+
+    .footer-slogan {
+      color: var(--yellow);
+      font-weight: 800;
+    }
+
+    @media (max-width: 760px) {
+      nav {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .nav-links {
+        justify-content: center;
+      }
+
+      .hero {
+        padding: 70px 7%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">✨ WonderSpark Universe</div>
+
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="ourworld.html">Our World</a>
+        <a href="ourworld.html#characters">Characters</a>
+        <a href="ourworld.html#about">Our Story</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="hero-content">
+        <div class="eyebrow">📱 Learn • Play • Explore • Grow</div>
+
+        <h1>WonderSpark Kids App</h1>
+
+        <p>
+          A joyful learning space created for young children to discover
+          letters, numbers, phonics, colours, shapes, animals, songs,
+          simple games and everyday life skills.
+        </p>
+
+     <div class="store-buttons">
+
+    <a class="store-button"
+       href="https://apps.apple.com/app/id6780499374"
+       target="_blank"
+       rel="noopener noreferrer">
+        🍎 Download on the App Store
+    </a>
+
+    <a class="store-button"
+       href="https://play.google.com/store/apps/details?id=com.wondersparkkids.webview"
+       target="_blank"
+       rel="noopener noreferrer">
+        🤖 Get it on Google Play
+    </a>
+
+</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-heading">
+        <span>Learning made joyful</span>
+        <h2>What Children Can Explore</h2>
+        <p>
+          WonderSpark Kids brings early learning activities together
+          in one colourful and child-friendly space.
+        </p>
+      </div>
+
+      <div class="feature-grid">
+
+        <article class="feature-card">
+          <div class="icon">🔤</div>
+          <h3>Letters & Phonics</h3>
+          <p>
+            Explore the alphabet, letter sounds, phonics and early
+            language skills.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <div class="icon">🔢</div>
+          <h3>Numbers & Counting</h3>
+          <p>
+            Practise numbers, counting and simple early maths concepts.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <div class="icon">🎨</div>
+          <h3>Colours & Shapes</h3>
+          <p>
+            Discover colourful shapes, patterns and visual learning
+            activities.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <div class="icon">🐾</div>
+          <h3>Animals & Nature</h3>
+          <p>
+            Learn about animals, sounds, nature and the world around us.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <div class="icon">🎵</div>
+          <h3>Songs & Rhymes</h3>
+          <p>
+            Enjoy learning through songs, rhythm, movement and familiar
+            themes.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <div class="icon">🧩</div>
+          <h3>Games & Activities</h3>
+          <p>
+            Build confidence through simple puzzles, matching,
+            counting and creative play.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <div class="icon">🌱</div>
+          <h3>Life Skills</h3>
+          <p>
+            Explore kindness, manners, safety, routines and everyday
+            learning.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <div class="icon">📚</div>
+          <h3>Stories & Learning</h3>
+          <p>
+            Discover educational ideas inspired by the growing
+            WonderSpark world.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="safe-section">
+      <div class="safe-box">
+        <h2>💛 Made With Young Learners in Mind</h2>
+
+        <p>
+          WonderSpark Kids is designed as a simple, colourful learning
+          experience where children can explore educational topics
+          through play, curiosity and imagination.
+        </p>
+
+        <p>
+          The aim is to make early learning feel welcoming, enjoyable
+          and easy to explore together with families.
+        </p>
+      </div>
+    </section>
+
+    <section class="back-section">
+      <h2>Explore More of WonderSpark Universe</h2>
+
+      <p>
+        Discover our books, characters, music, WonderSpark Hill and
+        growing collection of family-friendly learning adventures.
+      </p>
+
+      <a class="back-button" href="ourworld.html">
+        Explore Our World →
+      </a>
+    </section>
+
+  </main>
+
+  <footer>
+    <p class="footer-slogan">
+      And Remember, Wherever You Are, WonderSpark Lives In Your Heart!
+    </p>
+
+    <p>© 2026 WonderSpark Universe. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
