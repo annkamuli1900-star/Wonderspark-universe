@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Creative Learning | WonderSpark Universe</title>
+
+  <style>
+    :root {
+      --blue: #3d7ee8;
+      --purple: #7957d5;
+      --pink: #d75db2;
+      --yellow: #ffd84d;
+      --dark: #18233b;
+      --text: #34405a;
+      --light: #f7f8ff;
+      --white: #ffffff;
+      --green: #5dbb63;
+      --red: #ef5350;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--light);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--blue), var(--purple), var(--pink));
+      padding: 18px 30px;
+    }
+
+    nav {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      color: var(--white);
+      font-size: 22px;
+      font-weight: 800;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 70px 20px 45px;
+      background: linear-gradient(135deg, #eaf3ff, #f8edff);
+    }
+
+    .hero span {
+      color: var(--pink);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 14px;
+    }
+
+    .hero h1 {
+      margin: 12px 0;
+      font-size: clamp(36px, 6vw, 64px);
+      color: var(--dark);
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: auto;
+      font-size: 18px;
+    }
+
+    .activities {
+      max-width: 1100px;
+      margin: auto;
+      padding: 45px 20px 70px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+
+    .activity-card {
+      background: var(--white);
+      border-radius: 24px;
+      padding: 28px 22px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(45, 55, 90, 0.08);
+    }
+
+    .activity-card .emoji {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .activity-card h2 {
+      color: var(--dark);
+      margin: 8px 0 10px;
+      font-size: 24px;
+    }
+
+    .choices {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .choice {
+      border: none;
+      border-radius: 16px;
+      padding: 12px 16px;
+      font-size: 18px;
+      font-weight: 700;
+      cursor: pointer;
+      background: #edf2ff;
+      color: var(--dark);
+      transition: 0.2s ease;
+    }
+
+    .choice:hover {
+      transform: translateY(-2px);
+    }
+
+    .colour-choice {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      border: 4px solid white;
+      box-shadow: 0 0 0 2px #ddd;
+      cursor: pointer;
+    }
+
+    .result {
+      min-height: 32px;
+      margin-top: 16px;
+      font-weight: 800;
+      font-size: 18px;
+    }
+
+    .good {
+      color: var(--green);
+    }
+
+    .try {
+      color: var(--red);
+    }
+
+    .back-area {
+      text-align: center;
+      padding: 0 20px 60px;
+    }
+
+    .back-button {
+      display: inline-block;
+      padding: 13px 22px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, var(--blue), var(--purple));
+      color: white;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: var(--dark);
+      color: var(--white);
+    }
+
+    .footer-slogan {
+      font-weight: 800;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .nav-links {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">✨ WonderSpark Universe</div>
+
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="ourworld.html">Our World</a>
+        <a href="books.html">Books</a>
+        <a href="app.html">App</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+
+  <section class="hero">
+    <span>Learn • Play • Explore • Grow</span>
+
+    <h1>Creative Learning</h1>
+
+    <p>
+      Try a few fun WonderSpark activities made for young learners.
+      Choose an answer and see how you do!
+    </p>
+  </section>
+
+
+  <main class="activities">
+
+    <!-- LETTER HUNT -->
+    <section class="activity-card">
+      <div class="emoji">🔤</div>
+      <h2>Letter Hunt</h2>
+      <p>Can you find the letter <strong>B</strong>?</p>
+
+      <div class="choices">
+        <button class="choice" onclick="checkAnswer(this, false, 'letter-result')">A</button>
+        <button class="choice" onclick="checkAnswer(this, true, 'letter-result')">B</button>
+        <button class="choice" onclick="checkAnswer(this, false, 'letter-result')">D</button>
+      </div>
+
+      <div class="result" id="letter-result"></div>
+    </section>
+
+
+    <!-- COUNTING -->
+    <section class="activity-card">
+      <div class="emoji">⭐</div>
+      <h2>Count With WonderSpark</h2>
+
+      <p style="font-size: 30px;">⭐ ⭐ ⭐ ⭐ ⭐</p>
+      <p>How many stars can you see?</p>
+
+      <div class="choices">
+        <button class="choice" onclick="checkAnswer(this, false, 'count-result')">4</button>
+        <button class="choice" onclick="checkAnswer(this, true, 'count-result')">5</button>
+        <button class="choice" onclick="checkAnswer(this, false, 'count-result')">6</button>
+      </div>
+
+      <div class="result" id="count-result"></div>
+    </section>
+
+
+    <!-- COLOUR CHALLENGE -->
+    <section class="activity-card">
+      <div class="emoji">🎨</div>
+      <h2>Colour Challenge</h2>
+      <p>Which colour is <strong>RED</strong>?</p>
+
+      <div class="choices">
+        <button
+          class="colour-choice"
+          style="background: blue;"
+          aria-label="Blue"
+          onclick="checkAnswer(this, false, 'colour-result')">
+        </button>
+
+        <button
+          class="colour-choice"
+          style="background: red;"
+          aria-label="Red"
+          onclick="checkAnswer(this, true, 'colour-result')">
+        </button>
+
+        <button
+          class="colour-choice"
+          style="background: yellow;"
+          aria-label="Yellow"
+          onclick="checkAnswer(this, false, 'colour-result')">
+        </button>
+      </div>
+
+      <div class="result" id="colour-result"></div>
+    </section>
+
+
+    <!-- ANIMAL SOUNDS -->
+    <section class="activity-card">
+      <div class="emoji">🐶</div>
+      <h2>Animal Sounds</h2>
+      <p>Which animal says <strong>WOOF?</strong></p>
+
+      <div class="choices">
+        <button class="choice" onclick="checkAnswer(this, true, 'animal-result')">🐶 Dog</button>
+        <button class="choice" onclick="checkAnswer(this, false, 'animal-result')">🐱 Cat</button>
+        <button class="choice" onclick="checkAnswer(this, false, 'animal-result')">🐮 Cow</button>
+      </div>
+
+      <div class="result" id="animal-result"></div>
+    </section>
+
+  </main>
+
+
+  <div class="back-area">
+    <a class="back-button" href="index.html">
+      ← Back to WonderSpark Universe
+    </a>
+  </div>
+
+
+  <footer>
+    <p class="footer-slogan">
+      And Remember, Wherever You Are, WonderSpark Lives In Your Heart!
+    </p>
+
+    <p>© 2026 WonderSpark Universe. All rights reserved.</p>
+  </footer>
+
+
+  <script>
+    function checkAnswer(button, correct, resultId) {
+      const result = document.getElementById(resultId);
+
+      if (correct) {
+        result.textContent = "🎉 Great job! You got it!";
+        result.className = "result good";
+      } else {
+        result.textContent = "✨ Good try! Have another go.";
+        result.className = "result try";
+      }
+    }
+  </script>
+
+</body>
+</html>
