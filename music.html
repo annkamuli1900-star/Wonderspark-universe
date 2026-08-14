@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Original Music | WonderSpark Universe</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7f9ff;
+      color: #20233a;
+    }
+
+    /* HEADER */
+
+    header {
+      background: linear-gradient(135deg, #2454d6, #6a4bd8);
+      color: white;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* HERO */
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px 60px;
+      background: linear-gradient(180deg, #e9edff, #f7f9ff);
+    }
+
+    .hero span {
+      color: #a13d72;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      margin: 15px 0;
+      color: #252a4a;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: auto;
+      font-size: 19px;
+      line-height: 1.7;
+      color: #555b72;
+    }
+
+    /* MUSIC SECTION */
+
+    .music-section {
+      padding: 60px 7%;
+      text-align: center;
+    }
+
+    .music-section h2 {
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    .intro {
+      max-width: 700px;
+      margin: 0 auto 40px;
+      line-height: 1.7;
+      color: #5d6174;
+    }
+
+    .music-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .music-card {
+      background: white;
+      padding: 35px 25px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    }
+
+    .music-card .icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .music-card h3 {
+      color: #3344a1;
+      margin-bottom: 12px;
+    }
+
+    .music-card p {
+      color: #62677c;
+      line-height: 1.6;
+    }
+
+    /* LISTEN */
+
+    .listen {
+      margin: 60px auto;
+      max-width: 850px;
+      padding: 45px 25px;
+      text-align: center;
+      background: linear-gradient(135deg, #2454d6, #6a4bd8);
+      border-radius: 25px;
+      color: white;
+    }
+
+    .listen h2 {
+      margin-top: 0;
+      font-size: 32px;
+    }
+
+    .listen p {
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+
+    .listen-button {
+      display: inline-block;
+      background: #ffd447;
+      color: #20233a;
+      text-decoration: none;
+      padding: 15px 28px;
+      border-radius: 30px;
+      font-weight: bold;
+      margin: 6px;
+    }
+
+    .listen-button:hover {
+      transform: translateY(-2px);
+    }
+
+    /* FOOTER */
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #6b6f80;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      nav {
+        margin-top: 15px;
+      }
+
+      nav a {
+        margin: 0 10px 0 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">✨ WonderSpark Universe</div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="books.html">Books</a>
+    <a href="app.html">App</a>
+    <a href="ourworld.html">Our World</a>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero">
+
+    <span>SING • DANCE • LEARN • SMILE</span>
+
+    <h1>WonderSpark Music 🎵</h1>
+
+    <p>
+      Music made for little voices, big imaginations and joyful learning.
+      Discover original WonderSpark songs that encourage children to sing,
+      move, learn and explore the world around them.
+    </p>
+
+  </section>
+
+
+  <section class="music-section">
+
+    <h2>Music Made for Growing Minds</h2>
+
+    <p class="intro">
+      WonderSpark songs bring learning and entertainment together.
+      From letters and numbers to healthy habits, nature, movement and
+      everyday life, every song is created to make learning memorable and fun.
+    </p>
+
+
+    <div class="music-grid">
+
+      <article class="music-card">
+        <div class="icon">🔤</div>
+        <h3>Learning Songs</h3>
+        <p>
+          Sing along while discovering letters, phonics, numbers,
+          colours and other early-learning ideas.
+        </p>
+      </article>
+
+
+      <article class="music-card">
+        <div class="icon">💃</div>
+        <h3>Movement & Fun</h3>
+        <p>
+          Dance, clap, stretch and move with energetic songs made
+          for active young children.
+        </p>
+      </article>
+
+
+      <article class="music-card">
+        <div class="icon">🌍</div>
+        <h3>Explore the World</h3>
+        <p>
+          Songs inspired by animals, nature, weather, space and the
+          wonderful world around us.
+        </p>
+      </article>
+
+
+      <article class="music-card">
+        <div class="icon">❤️</div>
+        <h3>Life Skills</h3>
+        <p>
+          Friendly songs about kindness, safety, healthy habits,
+          confidence and growing up.
+        </p>
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <section class="listen">
+
+    <h2>Listen to WonderSpark Universe 🎧</h2>
+
+    <p>
+      Our original music is available across streaming platforms.
+      Sing, dance and learn with WonderSpark wherever you are.
+    </p>
+
+    <a
+  class="listen-button"
+  href="https://open.spotify.com/artist/163GazPmZykAznuZBMuvMw"
+  target="_blank"
+  rel="noopener noreferrer">
+  🎧 Spotify
+</a>
+
+<a
+  class="listen-button"
+  href="https://music.amazon.co.uk/artists/B0GS9QBYWN/wonderspark-universe"
+  target="_blank"
+  rel="noopener noreferrer">
+  🎵 Amazon Music
+</a>
+
+<a
+  class="listen-button"
+  href="https://youtube.com/@wonderspark-universe"
+  target="_blank"
+  rel="noopener noreferrer">
+  ▶️ YouTube
+</a>
+
+  </section>
+
+</main>
+
+
+<footer>
+  © WonderSpark Universe Ltd • Discover • Learn • Create • Imagine
+</footer>
+
+</body>
+</html>
